@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+
+
+<title>Insert title here</title>
+
+
+
+<script type="text/javascript" src = "./js/vue.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+	<div id ='app'>
+
+
+
+		{{add()}}
+
+
+
+		<span v-text="info"></span>
+
+
+
+		<span v-html="info"></span>
+
+
+
+
+
+
+
+	</div>
+
+
+
+	<script type="text/javascript">
+
+
+
+		var app = new Vue({
+
+
+
+			el:"#app",
+
+
+
+			data:{
+
+
+
+				num:0,
+
+
+
+				info:"<h3>标题</h3>"
+
+
+
+			},
+
+
+
+			methods:{
+
+
+
+				add(){
+
+
+
+					return 1+1;
+
+
+
+				}
+
+
+
+			}
+
+
+
+		})
+
+
+
+
+
+
+
+	</script>
+
+
+
+</body>
+
+
+
+</html> 

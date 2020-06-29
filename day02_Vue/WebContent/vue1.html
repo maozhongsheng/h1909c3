@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+	<!-- 创建模板 -->
+	<div id = "app">
+
+		姓名:<input type="text" v-model="name">
+
+		{{age}}
+		<button @click="add">加</button>
+		<button @click="rem">减</button>
+	</div>
+<script type="text/javascript">
+	//创建vue实例
+	var app = new Vue({
+		el:"#app",
+		data:{
+			name:"张三",
+			age:18
+		},
+		methods:{
+			add:function(){
+				//app.age++;
+				this.age++;
+			},
+			rem(){
+
+				this.age--;
+
+			}
+		}
+
+	});
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html> 
