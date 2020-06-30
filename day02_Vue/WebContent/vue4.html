@@ -1,121 +1,35 @@
 <!DOCTYPE html>
-
-
-
 <html>
-
-
-
 <head>
-
-
-
 <meta charset="UTF-8">
-
-
-
 <title>Insert title here</title>
-
-
-
 <script type="text/javascript" src = "./js/vue.js"></script>
-
-
-
 </head>
-
-
-
 <body>
-
-
-
 	<div id ='app'>
+	
+		<ul>
+		    <li v-for="(value,key,index)  in  emp">
+		     		{{index}}:{{key}}:{{value}}
+		    </li>
+  		</ul>
 
 
-
-		{{add()}}
-
-
-
-		<span v-text="info"></span>
-
-
-
-		<span v-html="info"></span>
-
-
-
-
-
-
-
+		<ul>
+		    <li v-for="i in 5">
+		     		{{i}}
+		    </li>
+  		</ul>
 	</div>
-
-
-
 	<script type="text/javascript">
-
-
-
 		var app = new Vue({
-
-
-
 			el:"#app",
-
-
-
 			data:{
-
-
-
-				num:0,
-
-
-
-				info:"<h3>标题</h3>"
-
-
-
-			},
-
-
-
-			methods:{
-
-
-
-				add(){
-
-
-
-					return 1+1;
-
-
-
-				}
-
-
-
+				
+				emp:{name:'柳岩', hobby:'篮球', age: 21}
 			}
-
-
-
 		})
 
-
-
-
-
-
-
 	</script>
-
-
-
 </body>
-
-
-
 </html> 

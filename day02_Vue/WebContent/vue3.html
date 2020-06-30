@@ -6,74 +6,38 @@
 <script type="text/javascript" src = "./js/vue.js"></script>
 </head>
 <body>
-
-
 	<div id ='app'>
-
-
-
-		{{num}}
-
-
-
-		<form>
-
-
-
-			姓名:<input type="text" v-model="user.name">
-			班级:<input type="text" v-model="user.grade">
-		</form>
+		姓名:<input type="text" v-model="name">
+	<br>
+		年龄：{{age}}
+		<br>
+		
+		<button @click="add">加</button>
+		<button @click="rem">减</button>
+		<br>
+		<input type="checkbox" v-model="hobby" value="WOW">WOW
+		<br><input type="checkbox" v-model="hobby" value="LOL">LOL
+		<br><input type="checkbox" v-model="hobby" value="王者农药">王者农药
+		<br><input type="checkbox" v-model="hobby" value="吃鸡">吃鸡
 	</div>
 	<script type="text/javascript">
 		var app = new Vue({
 			el:"#app",
-
 			data:{
-
-
-
-				user:{}
-
-
-
+				name:"张三",
+				age:18
+			
 			},
-
-
-
-			created(){
-
-
-
-				this.num=19,
-
-
-
-				this.user.name="张三",
-
-
-
-				this.user.grade="H1909C"
-
-
-
+			methods:{
+				add:function(){
+					this.age++;
+				},
+				rem(){
+					this.age--;
+				}
 			}
-
-
-
 		})
 
-
-
-
-
-
-
 	</script>
-
-
-
 </body>
-
-
-
 </html> 
