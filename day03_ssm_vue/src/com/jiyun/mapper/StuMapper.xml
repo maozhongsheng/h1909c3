@@ -22,5 +22,20 @@
 		s.cid=c.cid
 		</where>
 		</select>
+		<select id="findClazz" resultType="Clazz">
+		select * from class
+		</select>
+		<insert id="add" parameterType="Student">
+		insert into student values(null,#{sname},#{sex},null,#{birthday},#{cid})
+		</insert>
+		<update id="update" parameterType="student">
+		update student set sname=#{sname},sex=#{sex},birthday=#{birthday},cid=#{cid} where sid=#{sid}
+		</update>
+		<delete id="del"  >
+		delete from student where sid in
+		<foreach collection="ids" item="id" open="(" close=")" separator=",">
+		#{id}
+		</foreach>
+		</delete>
 </mapper>
 
